@@ -1,0 +1,30 @@
+.search__bar {
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ais-SearchBox-input {
+  height: 30px;
+  width: 500px;
+}
+
+.ais-SearchBox-submit {
+  height: 30px;
+  margin-left: 5px;
+}
+
+.ais-SearchBox-reset {
+  height: 30px;
+  margin-left: 5px;
+}
+
+@media only screen and (max-width: 430px) {
+  .product__image {
+    width: 300px;
+  }
+  .product__card {
+    padding-right: 10vh;
+  }
+}

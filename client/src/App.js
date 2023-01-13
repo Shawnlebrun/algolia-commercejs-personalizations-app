@@ -9,6 +9,8 @@ import ProductIndividual from "./components/ProductIndividual";
 import aa from "search-insights";
 import algoliasearch from "algoliasearch";
 import { InstantSearch, Configure } from "react-instantsearch-dom";
+import SearchBar from "./components/SearchBar";
+import SearchHits from "./components/SearchHits";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -53,6 +55,7 @@ function App() {
             element={
               <InstantSearch searchClient={searchClient} indexName="products">
                 <Configure clickAnalytics />
+                <SearchBar />
                 <ProductsList products={products} />
                 <Bot />
               </InstantSearch>
@@ -65,6 +68,18 @@ function App() {
               <InstantSearch searchClient={searchClient} indexName="products">
                 <Configure clickAnalytics />
                 <ProductIndividual />
+                <Bot />
+              </InstantSearch>
+            }
+          />
+          <Route
+            exact
+            path="/results/:query"
+            element={
+              <InstantSearch searchClient={searchClient} indexName="products">
+                <Configure clickAnalytics />
+                <SearchBar />
+                <SearchHits />
                 <Bot />
               </InstantSearch>
             }
