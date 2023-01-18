@@ -54,7 +54,11 @@ function App() {
             path="/"
             element={
               <InstantSearch searchClient={searchClient} indexName="products">
-                <Configure clickAnalytics />
+                <Configure 
+                  clickAnalytics
+                  enablePersonalization={true}
+                  userToken="user-1" 
+                />
                 <SearchBar />
                 <ProductsList products={products} />
                 <Bot />
@@ -66,7 +70,11 @@ function App() {
             path="/products/:id"
             element={
               <InstantSearch searchClient={searchClient} indexName="products">
-                <Configure clickAnalytics />
+                <Configure 
+                  clickAnalytics
+                  enablePersonalization={true}
+                  userToken="user-1" 
+                />
                 <ProductIndividual />
                 <Bot />
               </InstantSearch>
@@ -77,7 +85,11 @@ function App() {
             path="/results/:query"
             element={
               <InstantSearch searchClient={searchClient} indexName="products">
-                <Configure clickAnalytics />
+                <Configure 
+                  clickAnalytics
+                  enablePersonalization={true}
+                  userToken="user-1" 
+                />
                 <SearchBar />
                 <SearchHits />
                 <Bot />
